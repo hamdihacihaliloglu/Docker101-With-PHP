@@ -1,35 +1,35 @@
 # Docker-HelloWorld-With-PHP
-#Docker Hakkında Araştırmalarım Doğrultusunda Almış Olduğum Notlar
+# Docker Hakkında Araştırmalarım Doğrultusunda Almış Olduğum Notlar
 
-*1.0-Container Nedir?
-       *1.1-Container Mimarisi Nasıl Çalışır?
-*2.0-Docker Nedir?
-        *2.1-Docker Mimarisi Nasıl Çalışır?
-        *2.2-Docker İle İlgili Temel Kavramlar
-                *2.2.0-İmage Nedir?
-                *2.2.1-Dockerfile Nedir?
-                *2.2.2-Docker Network Nedir?
-                *2.2.3-Docker Compose Nedir?
-*3.0-Docker Komutlarından Bazıları ve İşlevleri
-*4.0-Nginx Nedir?
-*5.0-Docker ve Php Temel Kod Örnekleri
-*6.0-Karşılaştığım Hatalar ve Çözüm Önerileri
-        *6.1-Windows 10 Home Docker Kurulumu
-        *6.2-Yazım Hataları Kaynaklı Hatalar
-        *6.3-Projeyi Ayağa Kaldırırken Kullanılan Komut Dolayısıyla Yanlış Yükleme
-
-
+* 1.0-Container Nedir?
+       * 1.1-Container Mimarisi Nasıl Çalışır?
+* 2.0-Docker Nedir?
+        * 2.1-Docker Mimarisi Nasıl Çalışır?
+        * 2.2-Docker İle İlgili Temel Kavramlar
+                * 2.2.0-İmage Nedir?
+                * 2.2.1-Dockerfile Nedir?
+                * 2.2.2-Docker Network Nedir?
+                * 2.2.3-Docker Compose Nedir?
+* 3.0-Docker Komutlarından Bazıları ve İşlevleri
+* 4.0-Nginx Nedir?
+* 5.0-Docker ve Php Temel Kod Örnekleri
+* 6.0-Karşılaştığım Hatalar ve Çözüm Önerileri
+        * 6.1-Windows 10 Home Docker Kurulumu
+        * 6.2-Yazım Hataları Kaynaklı Hatalar
+        * 6.3-Projeyi Ayağa Kaldırırken Kullanılan Komut Dolayısıyla Yanlış Yükleme
 
 
 
 
-##1.0-Container Nedir?
+
+
+## 1.0-Container Nedir?
         Container (konteyner) denince aklımıza ilk olarak gemilerde taşımacılığı yapılan her biri birbirinden bağımsız ve aynı boyutlarda olan yani belirli standartlara sahip bulundukları yerden başka bir tarafa rahat bir şekilde taşınabilen kapalı kutular gelir. Üzerinde konuştuğumuz teknoloji bu temel taşımacılık kavramı ele alınarak oluşturulmuştur.
         Container kısa ve net tanımıyla, bir uygulamanın ihtiyaç duyulan tüm bağımlılıklar, kütüphaneler ve diğer tüm nesneler ile birlikte paketlenerek standart hale getirilmesidir.
         Oluşturulan bu kutular bir işletim sisteminden diğerine , bir bilgisayardan başka bir bilgisayara kolaylıkla ve güvenli bir şekilde taşınabilmektedir.Taşıma işleminde uygulama ile birlikte uygulamanın yaşamsal döngüsü için gerekli olan bütün nesneler aktarıldığı için uygulama herhangi bir problem olmadan çalışmaya devam edecektir.
 
 
-#1.1-Container Mimarisi Nasıl Çalışır?
+# 1.1-Container Mimarisi Nasıl Çalışır?
         Container mimarisinde en alt katmandan en üst katmana şu şekilde sıralanabilir;
                 -İşletim sistemi 
                 -Container Engine ( Konteyner yöneticisi) (Docker vb.)
@@ -39,13 +39,13 @@
 Her konteyner birbirinden bağımsız ve habersiz bir şekilde çalışmaktadır biz bu konteynerleri oluşturmak, yönetmek veya çalıştırmak istersek orta katmanda bulunan container engine araçlarından birini kullanmak zorundayız. 
 
 
-##2.0-Docker Nedir?
+## 2.0-Docker Nedir?
          Docker kısa ve net bir şekilde tanımlanması gerekirse, container teknolojisi kullanılarak uygulama geliştirmeyi ve çalıştırmayı kolaylaştıran açık kaynak kodlu bir platformdur.
         İşletim sisteminden bağımsız olarak uygulamalarımızı derlememize , test etmemize ve dağıtmamıza imkan sağlayan bir yazılım çözümüdür. 
         Docker uygulamamız için gerekli olan tüm dosyaları (kütüphaneler,bağımlılıklar vb) paketleyip bir container haline getirmektedir.Her container alt katmandaki işletim sistemine göre servisleri paylaştırmaktadır.
 
 
-#2.1-Docker Mimarisi Nasıl Çalışır?
+# 2.1-Docker Mimarisi Nasıl Çalışır?
 Docker aşağıda adı geçen bölümlerden oluşmaktadır;
         -Docker Host
         -Docker Client
@@ -79,12 +79,12 @@ Docker Engine Nedir?
                 -Docker CLI: docker komut satırı ile rest apı kullanarak daemon ile iletişim kurmamızı sağlar.
 
 
-##2.2-Temel Kavramalar
-#2.2.0-Docker İmage Nedir?
+## 2.2-Temel Kavramalar
+# 2.2.0-Docker İmage Nedir?
 -Birden çok katmandan oluşan ve docker container da işlem yapmak için oluşturulmuş dosyalardır.
 -Konteynerlerin çalışması için gerekli önceden tanımlanmış kalıplar da diyebiliriz.
 !! Dockerfile kullanarak oluşturulurlar.
-2.2.1-Dockerfile Nedir?
+# 2.2.1-Dockerfile Nedir?
 -İmage dosyası oluşturulurken var olan katmanların ve tüm işlemlerin detaylıca belirtildiği ve açıklandığı text dosyalarıdır.        
 -Bunu hazır kurulu gelmeyen bir eşyayı kurarken kullandığımız, nasıl kurulum yapacağımızı adım adım anlatan bir kurulum kılavuzuna benzetebiliriz.
 -.yaml veya .yml uzantılı dosyalar ile oluşturulur.
@@ -101,7 +101,7 @@ Dockerfile Komutlarından Bazıları
 
 
 
-#2.2.2 Docker Network Nedir? 
+# 2.2.2 Docker Network Nedir? 
 Docker evreninde container sistemlerinin birbirleri ve dış dünya ile konuşmalarını ,dış dünyadan container’ lara erişimi yani tüm iletişim alt yapılarını docker network objelerini kullanarak sağlıyoruz. 
 Varsayılan docker network objesi Bridge network’üdür. Eğer yeni bir container network oluşturmak istersek ve sürücü belirtmez isek otomatik olarak Bridge Driver kullanılacaktır.
 
@@ -113,69 +113,69 @@ Varsayılan docker network objesi Bridge network’üdür. Eğer yeni bir contai
 -Komut satırında docker compose veya docker-compose kullanarak
 
 
-##3.0-Docker Komutlarından Bazıları ve İşlevleri
+## 3.0-Docker Komutlarından Bazıları ve İşlevleri
 
 
 Docker kurulumunu yaptıktan sonra kontrol amacıyla (CMD,Powershell) üzerine ;
-'''
+```
 docker version 
-'''
+```
 komutu yazılarak docker sürümü kontrol edilebilir.
 
 
 Sistemde yer alan image container, çalışan container sayısı ile ilgili bilgileri öğrenmek istiyorsak
-'''
+```
 docker info
-'''
+```
 komutu çalıştırılır.
 
 
 İmage dosyalarını aramak için search komutu kullanılabilir.
-'''
+```
 docker search image-adı 
-'''
+```
 şeklinde kullanılır.
 
 
 İmage dosyası indirmek için 
-'''
+```
 docker pull image-adı
-'''
+```
 
 İmageları listelemek için images komutu kullanılır.
-'''
+```
 docker images
-'''
+```
 
 İmage silmek için rmi komutu
-'''
+```
 docker rmi image-adı
-'''
+```
 
 İmage çalıştırmak için 
-'''
+```
 docker run image-adı
-'''
+```
 docker komutları çalıştırılırken arka planda çalışmasını istiyorsak sonuna -d koymamız gerekir.
-'''
+```
 docker-compose up -d
-'''
+```
 böylelikle yeni bir komut girmek için önceki komutu durdurmamız gerekmez.
 
 
 
 
 Bir container ı başlatmak ve durdurmak için
-'''
+```
 docker start container-id        →Başlatmak için
 docker stop container-id        →Durdurmak için
 docker kill container-id          →Zorla Durdurmak için
-'''
+```
 
 Bir container silmek için
-'''
+```
 docker rm container-id
-'''
+```
 
 ##4.0 Nginx Nedir?
 Nginx yaygın olarak kullanılan açık kaynak bir web sunucusudur. Apache’nin bir alternatifi olarak düşünebiliriz.
