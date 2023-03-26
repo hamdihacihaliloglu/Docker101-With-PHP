@@ -31,9 +31,9 @@
 
 ## 1.1-Container Mimarisi Nasıl Çalışır?
 - Container mimarisinde en alt katmandan en üst katmana şu şekilde sıralanabilir;
-                - İşletim sistemi 
-                - Container Engine ( Konteyner yöneticisi) (Docker vb.)
-                - Container Engine üzerinde birbirinden bağımsız olarak çalışan konteynerler
+            <br>     - İşletim sistemi 
+            <br>   - Container Engine ( Konteyner yöneticisi) (Docker vb.)
+            <br>   - Container Engine üzerinde birbirinden bağımsız olarak çalışan konteynerler
 
 
 - Her konteyner birbirinden bağımsız ve habersiz bir şekilde çalışmaktadır biz bu konteynerleri oluşturmak, yönetmek veya çalıştırmak istersek orta katmanda bulunan container engine araçlarından birini kullanmak zorundayız. 
@@ -47,15 +47,15 @@
 
 ## 2.1-Docker Mimarisi Nasıl Çalışır?
 - Docker aşağıda adı geçen bölümlerden oluşmaktadır.
-      - Docker Host
-      - Docker Client
-      - Registry
-      - Docker Object (İmage,Volume,Container ,Plugin)
+      <br> - Docker Host
+      <br> - Docker Client
+      <br> - Registry
+      <br> - Docker Object (İmage,Volume,Container ,Plugin)
 
 
 - Docker istemci-sunucu (client-host) mimarisine dayanmaktadır.
-        -Docker Client: Hizmet alan taraf (komut satırı , arayüz vb.)
-        -Docker Host: Client tarafından gelen isteklerin dinlendiği, container işlemlerinin yapılıp takip edildiği Docker Engine ‘in yürütüldüğü taraftır.
+       <br>  -Docker Client: Hizmet alan taraf (komut satırı , arayüz vb.)
+       <br>  -Docker Host: Client tarafından gelen isteklerin dinlendiği, container işlemlerinin yapılıp takip edildiği Docker Engine ‘in yürütüldüğü taraftır.
 
 
 !! Docker Host üzerinde Docker daemon çalışmaktadır ve tüm docker işlemlerini Docker daemon servisi geliştirmektedir.
@@ -74,9 +74,9 @@
 (Ek bilgi-Benzer Bilgi)
 Docker Engine Nedir?
         Docker Engine server client mimarisinde bir uygulamadır. 3 temel katmanı vardır.
-                -Docker Daemon:İmage ,Container , Volume gibi docker objelerini yaratmamıza ve kontrol etmemize olanak sağlar. 
-                -Docker Rest API:Daemon ile iletişim kurmamızı sağlayan yapı
-                -Docker CLI: docker komut satırı ile rest apı kullanarak daemon ile iletişim kurmamızı sağlar.
+               <br>  -Docker Daemon:İmage ,Container , Volume gibi docker objelerini yaratmamıza ve kontrol etmemize olanak sağlar. 
+               <br>  -Docker Rest API:Daemon ile iletişim kurmamızı sağlayan yapı
+               <br>  -Docker CLI: docker komut satırı ile rest apı kullanarak daemon ile iletişim kurmamızı sağlar.
 
 
 # 2.2-Temel Kavramalar
@@ -183,8 +183,6 @@ docker rm container-id
 
 - [Ngix kullanarak php ile hello-world yazdırma](https://github.com/hamdihacihaliloglu/Docker-HelloWorld-With-PHP/tree/main/ngix-helloworld-docker-php)
 - [Php Apache kullanarak hello-world yazıdırma](https://github.com/hamdihacihaliloglu/Docker-HelloWorld-With-PHP/tree/main/php-helloworld-docker)
-
-
 
 
 
