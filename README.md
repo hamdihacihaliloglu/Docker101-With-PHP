@@ -188,8 +188,8 @@ docker rm container-id
 
 
 
-## 6.0-Karşılaştığım Hatalar ve Çözüm Önerileri
-# 6.1-Windows 10 Home Docker Kurulumu
+# 6.0-Karşılaştığım Hatalar ve Çözüm Önerileri
+## 6.1-Windows 10 Home Docker Kurulumu
 - Docker Desktop kurulumunu yapıp bilgisayarınızı yeniden başlattığınızda muhtemelen wsl ile ilgili bir hata alıcaksınızdır aşağıda linkini verdiğim dökümandaki işlemleri adım adım takip ederek ve  komutları powershell i yönetici olarak çalıştırarak yazdığınızda sorununuz çözülmüş olacaktır. [Windows WSL Döküman Link:](https://learn.microsoft.com/tr-tr/windows/wsl/install-manual#step-1---enable-the-windows-subsystem-for-linux)
 
 
@@ -199,10 +199,10 @@ docker rm container-id
 
 
 
-# 6.2-Yazım Hataları Kaynaklı Hatalar
+## 6.2-Yazım Hataları Kaynaklı Hatalar
 - docker-compose up komutunu çalıştırdığınız zaman “…. Additional property .... is not allowed “ gibi bir hata alırsanız muhtemelen docker-compose.yml dosyanızda bir kelimeyi yanlış yazmış olabilirsiniz. 
 - Örneğin:” ` Services.db Additional property enviroment is not allowed `” şeklinde bir hata almış iseniz docker-compose.yml dosyanızda enviroment yerine environment yazmanız durumunda muhtemelen hata ortadan kalkacaktır.
 
 
-# 6.3-Projeyi Ayağa Kaldırırken Kullanılan Komut Dolayısıyla Yanlış Yükleme
+## 6.3-Projeyi Ayağa Kaldırırken Kullanılan Komut Dolayısıyla Yanlış Yükleme
 - Kodunuzu yazdınız ve komut satırına docker-compose up komutunu girdiniz , yükleme tamamlandıktan sonra docker da container a baktığınızda örneğin php imajında “ ` php-fpm error failed to post process the configuration ` ” şeklinde bir hata görebilirsiniz. Bu durumda öncelikle  ` docker-compose build  ` komutunu çalıştırıp ardından  ` docker-compose up ` komutu girilmesi durumunda hata ortadan kalkabilir.
