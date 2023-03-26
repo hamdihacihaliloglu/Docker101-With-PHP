@@ -181,8 +181,8 @@ docker rm container-id
 
 # 5.0-Docker ve Php Temel Kod Örnekleri
 
-- [Ngix kullanarak php ile hello-world yazdırma](https://github.com/hamdihacihaliloglu/Docker-HelloWorld-With-PHP/tree/main/ngix-helloworld-docker-php)
-- [Php Apache kullanarak hello-world yazıdırma](https://github.com/hamdihacihaliloglu/Docker-HelloWorld-With-PHP/tree/main/php-helloworld-docker)
+- [Ngix kullanarak php ile hello-world yazdırma](https://github.com/hamdihacihaliloglu/Docker101-With-PHP/tree/main/ngix-helloworld-docker-php)
+- [Php Apache kullanarak hello-world yazıdırma](https://github.com/hamdihacihaliloglu/Docker101-With-PHP/tree/main/php-helloworld-docker)
 
 
 
