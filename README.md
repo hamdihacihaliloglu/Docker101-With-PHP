@@ -15,7 +15,7 @@
 - 5.0-Docker ve Php Temel Kod Örnekleri
 - 6.0-Karşılaştığım Hatalar ve Çözüm Önerileri
         <br> * 6.1-Windows 10 Home Docker Kurulumu
-        <br> * 6.2-Yazım Hataları Kaynaklı Hatalar
+        <br> * 6.2-Yazım Yanlışı Kaynaklı Hatalar
         <br> * 6.3-Projeyi Ayağa Kaldırırken Kullanılan Komut Dolayısıyla Yanlış Yükleme
 
 
